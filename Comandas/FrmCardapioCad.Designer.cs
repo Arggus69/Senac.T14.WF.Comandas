@@ -38,6 +38,8 @@
             txtTitulo = new ReaLTaiizor.Controls.CrownTextBox();
             btnCancelar = new ReaLTaiizor.Controls.Button();
             btnSalvar = new ReaLTaiizor.Controls.Button();
+            txtId = new ReaLTaiizor.Controls.CrownTextBox();
+            thunderLabel3 = new ReaLTaiizor.Controls.ThunderLabel();
             thunderGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,6 +50,8 @@
             thunderGroupBox1.BodyColorB = Color.FromArgb(30, 30, 30);
             thunderGroupBox1.BodyColorC = Color.FromArgb(46, 46, 46);
             thunderGroupBox1.BodyColorD = Color.FromArgb(50, 55, 58);
+            thunderGroupBox1.Controls.Add(thunderLabel3);
+            thunderGroupBox1.Controls.Add(txtId);
             thunderGroupBox1.Controls.Add(chkPreparo);
             thunderGroupBox1.Controls.Add(thunderLabel2);
             thunderGroupBox1.Controls.Add(thunderLabel1);
@@ -85,7 +89,7 @@
             chkPreparo.ForeColor = Color.FromArgb(245, 245, 245);
             chkPreparo.LinearGradient_Background = false;
             chkPreparo.LinearGradientPen = false;
-            chkPreparo.Location = new Point(278, 231);
+            chkPreparo.Location = new Point(36, 278);
             chkPreparo.Name = "chkPreparo";
             chkPreparo.RGB = false;
             chkPreparo.Rounding = true;
@@ -203,6 +207,27 @@
             btnSalvar.TextAlignment = StringAlignment.Center;
             btnSalvar.Click += btnSalvar_Click;
             // 
+            // txtId
+            // 
+            txtId.BackColor = Color.FromArgb(69, 73, 74);
+            txtId.BorderStyle = BorderStyle.FixedSingle;
+            txtId.ForeColor = Color.FromArgb(220, 220, 220);
+            txtId.Location = new Point(214, 231);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(87, 31);
+            txtId.TabIndex = 18;
+            // 
+            // thunderLabel3
+            // 
+            thunderLabel3.BackColor = Color.Transparent;
+            thunderLabel3.ForeColor = Color.WhiteSmoke;
+            thunderLabel3.Location = new Point(214, 193);
+            thunderLabel3.Margin = new Padding(2, 4, 2, 4);
+            thunderLabel3.Name = "thunderLabel3";
+            thunderLabel3.Size = new Size(98, 31);
+            thunderLabel3.TabIndex = 19;
+            thunderLabel3.Text = "Id";
+            // 
             // FrmCardapioCad
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -231,5 +256,7 @@
         private ReaLTaiizor.Controls.Button btnCancelar;
         private ReaLTaiizor.Controls.Button btnSalvar;
         private ReaLTaiizor.Controls.CyberCheckBox chkPreparo;
+        private ReaLTaiizor.Controls.CrownTextBox txtId;
+        private ReaLTaiizor.Controls.ThunderLabel thunderLabel3;
     }
 }

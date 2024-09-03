@@ -15,6 +15,16 @@ namespace Comandas
         public FrmCardapio()
         {
             InitializeComponent();
+            ListarCardapios();
+        }
+
+        private void ListarCardapios()
+        {
+            using (var banco = new AppDbContext())
+            {
+                var cardapios = banco.Cardapios.ToList();
+                dgvCardapio.DataSource = cardapios;
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

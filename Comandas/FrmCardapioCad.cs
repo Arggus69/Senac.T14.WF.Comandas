@@ -41,7 +41,16 @@ namespace Comandas
 
         private void AtualizarCardapio()
         {
-            
+               using (var banco = new AppDbContext()) 
+               {
+                    var cardapio = banco.Cardapios.FirstOrDefault(f => f.Id == int.Parse(txtId.Text));
+
+                    cardapio.Titulo = txtTitulo.Text;
+                    cardapio.Descricao = txtDescricao.Text;
+                    cardapio.Preco = decimal.Parse(txtPreco.Text);
+                    cardapio.PossuiPreparo = chkPreparo.Checked;
+                    banco.SaveChanges();
+               }            
         }
 
         private void AdicionarCardapio()
