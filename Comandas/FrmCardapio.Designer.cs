@@ -75,6 +75,7 @@
             // 
             btnExcluir.BackColor = Color.Red;
             btnExcluir.BorderColor = Color.FromArgb(165, 37, 37);
+            btnExcluir.Enabled = false;
             btnExcluir.EnteredBorderColor = Color.FromArgb(165, 37, 37);
             btnExcluir.EnteredColor = Color.FromArgb(165, 37, 37);
             btnExcluir.Font = new Font("Microsoft Sans Serif", 12F);
@@ -95,6 +96,7 @@
             // 
             btnEditar.BackColor = Color.Lime;
             btnEditar.BorderColor = Color.LimeGreen;
+            btnEditar.Enabled = false;
             btnEditar.EnteredBorderColor = Color.LimeGreen;
             btnEditar.EnteredColor = Color.LimeGreen;
             btnEditar.Font = new Font("Microsoft Sans Serif", 12F);
@@ -139,6 +141,7 @@
             dgvCardapio.RowHeadersWidth = 62;
             dgvCardapio.Size = new Size(749, 276);
             dgvCardapio.TabIndex = 15;
+            dgvCardapio.CellClick += dgvCardapio_CellClick;
             // 
             // FrmCardapio
             // 
